@@ -1,4 +1,5 @@
 import { API_KEY } from "@env";
+import { CAFE_IMAGES } from "./constants";
 
 export const getPlaceThumbnailImage = (icon) => `${icon.prefix}${icon.suffix}`;
 
@@ -14,3 +15,6 @@ export const getParamsAndHeaders = (lat = 47.606, lng = -122.349358) => ({
     Authorization: process.env["API_KEY"],
   },
 });
+
+export const getRandomCafeImages = () =>
+  CAFE_IMAGES[Math.floor(Math.random() * CAFE_IMAGES.length)];

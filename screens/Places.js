@@ -1,10 +1,10 @@
-import { Alert, StyleSheet, View, Text } from "react-native";
-import { useContext, useEffect, useState } from "react";
+import { StyleSheet, View } from "react-native";
+import { useContext, useState } from "react";
 import { PlacesContext } from "../context/PlacesContext";
 import Map from "../components/Map";
 import PlacesList from "../components/PlacesList";
 
-const Places = ({ route }) => {
+const Places = () => {
   const { places } = useContext(PlacesContext);
   const [selectedLocation, setSelectedLocation] = useState({
     latitude: 47.606,
