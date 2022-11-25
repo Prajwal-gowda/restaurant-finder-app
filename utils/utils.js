@@ -18,3 +18,10 @@ export const getParamsAndHeaders = (lat = 47.606, lng = -122.349358) => ({
 
 export const getRandomCafeImages = () =>
   CAFE_IMAGES[Math.floor(Math.random() * CAFE_IMAGES.length)];
+
+export const getFormattedAddressFromLocation = (cafeList, location) =>
+  cafeList.find(
+    (cafe) =>
+      cafe.geocodes.main.latitude === location.latitude &&
+      cafe.geocodes.main.longitude === location.longitude
+  ).location["formatted_address"];
