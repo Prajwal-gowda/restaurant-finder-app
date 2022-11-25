@@ -1,3 +1,7 @@
+## Restaurant Finder App
+
+App to find restaurants/places around the specified location using FourSquare API.
+
 ## Available Scripts
 
 In the project directory, you can run:
